@@ -1,7 +1,11 @@
 import Functions
+import time
+
+now=time.strftime("%d %B %Y %A %X")
+print ("It is", now)
 
 while (True):
-    user_action=input("enter add, show, edit, complete or exit"+"\n")
+    user_action=input("Enter add, show, edit, complete or exit"+"\n")
     user_action=user_action.strip()
 
     if user_action.startswith("add"):
