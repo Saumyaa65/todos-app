@@ -21,10 +21,14 @@ while True:
 
     match event:
         case "Convert":
-            feet=int(values["feet"])
-            inch=int(values["inch"])
-            metre=str(feet*0.3048+inch*0.0254)+" m"
-            window["output"].update(metre)
+            try:
+                feet=int(values["feet"])
+                inch=int(values["inch"])
+                metre=str(feet*0.3048+inch*0.0254)+" m"
+                window["output"].update(metre)
+            except ValueError:
+                gui.popup("Please provide two numbers",
+                          font=("Times New Roman", 14))
 
         case gui.WIN_CLOSED:
             break
