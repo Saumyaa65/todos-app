@@ -8,5 +8,5 @@ def make_archive(filepaths,dest_dir):
             archive.write(filepath, arcname=filepath.name)
 
 if __name__=="__main__":
-    make_archive(filepaths=["bonus.py", "ZipGui.py"],
+    make_archive(filepaths=["FeetConvertor.py", "ZipGui.py"],
                  dest_dir="D:\Python\Todos")

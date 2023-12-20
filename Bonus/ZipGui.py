@@ -20,9 +20,13 @@ window=gui.Window("Compressor",
 while(True):
     event, values = window.read()
     print(event,values)
-    filepaths= values["files"].split(";")
-    folder=values["folder"]
-    make_archive(filepaths, folder)
-    window["output"].update(value="Compression Completed")
+    match event:
+        case "Compress":
+            filepaths= values["files"].split(";")
+            folder=values["folder"]
+            make_archive(filepaths, folder)
+            window["output"].update(value="Compression Completed")
+        case gui.WIN_CLOSED:
+            break
 
 window.close()

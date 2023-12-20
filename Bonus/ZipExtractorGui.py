@@ -21,10 +21,13 @@ window=gui.Window("Archive Extractor",
 
 while True:
     event, value= window.read()
-    print (event, value)
-    path=value["archive"]
-    des=value["folder"]
-    extract_archive(path, des)
-    window["output"].update(value="Extraction Completed")
+    match event:
+        case "Extract":
+            path=value["archive"]
+            des=value["folder"]
+            extract_archive(path, des)
+            window["output"].update(value="Extraction Completed")
+        case gui.WIN_CLOSED:
+            break
 
 window.close()
