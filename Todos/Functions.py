@@ -1,4 +1,4 @@
-FILEPATH="todos_run.txt"
+FILEPATH="todos.txt"
 
 def open_read(filepath=FILEPATH):
     """
