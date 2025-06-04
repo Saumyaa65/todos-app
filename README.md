@@ -47,3 +47,15 @@ The project is structured into three main Python files to ensure modularity and 
     * It includes basic error handling for common user mistakes (e.g., trying to edit/complete without selecting an item).
 
 ## File Structure
+├── todos-app/
+│   ├── functions.py
+│   ├── todos.py
+│   ├── gui.py
+│   ├── todos.txt  (automatically created/used by the app)
+│   └── Images/
+│       ├── add.png
+│       ├── edit.png
+│       ├── complete.png
+│       └── exit.png
+
+**Note:** For the GUI (`gui.py`) to display correctly, the `Images/` directory containing `add.png`, `edit.png`, `complete.png`, and `exit.png` must be present in the same directory as `gui.py`.
